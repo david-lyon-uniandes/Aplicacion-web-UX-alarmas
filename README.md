@@ -8,3 +8,9 @@
 ## Ejcución:
 
 Abrir el archivo INDEX.HTML con un navegador, este html equivale a la ventana de lsitado alarmas
+
+
+## Ejemplo de despligue:
+
+
+https://youtu.be/c8RUX2AzV90
