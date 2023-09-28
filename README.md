@@ -1,3 +1,5 @@
+versión 1.0.0
+
 # Aplicacion web UX alarmas
 
 ## Integrantes:
