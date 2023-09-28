@@ -372,6 +372,10 @@ display: none;
     color: gray; /* Cambia el color del texto a gris */
 }
 
+#currentDate{
+    color: rgb(0, 0, 0);
+}
+
 
 /* Establece la imagen de fondo para todo el cuerpo (body) del HTML */
 body {
