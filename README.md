@@ -1,10 +1,10 @@
 # Aplicacion web UX alarmas
 
- Integrantes:
+##Integrantes:
 
  - David Andres Vargas Leon
  - Isaí Oliva
 
-Ejcución:
+##Ejcución:
 
- Abrir el archivo index.html con un navegador, este html equivale a la ventana de lsitado alarmas
+Abrir el archivo INDEX.HTML con un navegador, este html equivale a la ventana de lsitado alarmas
