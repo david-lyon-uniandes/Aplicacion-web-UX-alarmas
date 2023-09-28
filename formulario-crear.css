@@ -1,0 +1,85 @@
+/* Estilos para el formulario */
+.card {
+    width: 300px; /* Define el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.card-header {
+    background-color: white; /* Fondo blanco para el encabezado */
+}
+
+.card-body {
+    padding: 20px; /* Espaciado dentro del cuerpo del formulario */
+}
+
+.card-footer {
+    background-color: white; /* Fondo blanco para el pie del formulario */
+    padding: 15px; /* Espaciado dentro del pie del formulario */
+}
+
+/* Estilo para el título centrado */
+.card-header h4 {
+    text-align: center;
+    margin: 0;
+    padding: 10px; /* Espaciado en el encabezado */
+}
+
+/* Estilo para el botón "Crear" */
+#btn-crear {
+    background-color: #fbfbfb;;
+    border: 2px solid black;
+    color: #000000; /* Color del botón */
+    padding: 5px 30px; /* Añade espacio alrededor del texto */
+}
+
+/* Estilo para los botones de AM/PM */
+.btn-sm {
+    width: auto; /* Ajusta el ancho de los botones automáticamente */
+    padding: 0.25rem 0.5rem; /* Añade un poco de espacio alrededor de los botones */
+}
+
+/* Estilo para el campo de hora */
+#hora-fecha {
+    width: 60%; /* Ajusta el ancho del campo de hora según tus necesidades */
+}
+
+#fecha {
+    width: 110%; /* Ajusta el ancho del campo de hora según tus necesidades */
+}
+
+.day-button {
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Altura fija */
+    border-radius: 50%; /* Esto hace que los botones sean círculos */
+    margin-right: 5px; /* Espacio entre los botones (ajusta según lo necesites) */
+    display: flex; /* Usamos display: flex para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    white-space: nowrap; /* Evita el ajuste de texto */
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  
+.custom-combobox select {
+width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+background: url('flecha-combo.png') no-repeat right center;
+}
+  
+.custom-combobox select::-ms-expand {
+display: none;
+}
+
+.form-check{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    color: #a19f9f;
+}

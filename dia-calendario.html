@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlaza el archivo CSS externo -->
+    <style>
+        .selected-day {
+            background-color: #007bff;
+            color: #fff;
+        }
+         /* Estilo para los círculos amarillos */
+        .row {
+            display: flex;
+            align-items: center;
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .table {
+            border: none;
+        }
+
+        .table th,
+        .table td {
+            border: none;
+        }
+        .large-text {
+            font-size: 24px; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="http://imgfz.com/i/Vx5mNoK.png" alt="Imagen" class="headers-buttons">
+    <h1>Flower Alarms</h1>
+    <button class="boton headers-buttons">Música</button>
+    <button class="boton headers-buttons"  onclick="redirectToListAlarm()">Alarmas</button>
+    <button class="boton headers-buttons" onclick="redirectToCalendar()">Calendario</button>
+    <button class="boton headers-buttons">Perfil</button>
+    <button class="boton boton-salir headers-buttons" onclick="redirectToListAlarm()" id="salir-button">Salir</button>
+</header>
+
+<div class="container mt-4">
+    <!-- Mover los botones aquí -->
+    <div style="text-align: left;">
+        <div>
+            <button class="btn btn-primary" id="todayBtn">Dia</button>
+        </div>
+        <div style="margin-top: 15px;"> <!-- Agregar margen superior -->
+            <button class="btn btn-primary" id="monthBtn" onclick="redirectToCalendar()">Mes</button>
+        </div>
+    </div>
+    
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <table class="table table-bordered" id="calendario">
+                <h1 id="currentDate">martes, 26 de septiembre de 2023</h1>
+                <thead>
+                    <tr>
+                        
+                        <th colspan="6" class="text-right">
+                            <button class="btn btn-primary" id="prevMonthBtn">&lt;</button>
+                            <button class="btn btn-primary" id="todayBtn2">Hoy</button>
+                            <button class="btn btn-primary" id="nextMonthBtn">&gt;</button>
+                        </th>
+                    </tr>
+                
+                </thead>
+                <th colspan="70" class="text-left large-text">
+                    <div class="row">
+                        <div class="circle"></div>
+                        <p>DEPORTE 01:20 PM </p>
+                    </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <p>Niños 02:20 PM</p>
+                    </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <p>Colegio 03:20 PM</p>
+                    </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <p>Colegio 04:20 PM</p>
+                    </div>
+                    <div class="row">
+                        <div class="circle"></div>
+                        <p>Colegio 05:20 PM</p>
+                    </div>
+                </th>
+                
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function redirectToListAlarm() {
+            window.location.href = 'index.html'; // Cambia 'tu_pagina.html' por la URL de la página a la que quieres redirigir
+        }
+
+    function redirectToCalendar() {
+        window.location.href = 'calendario.html'; // Cambia 'tu_pagina.html' por la URL de la página a la que quieres redirigir
+    }
+
+    function redirectToCalendar() {
+            window.location.href = 'calendario.html'; // Cambia 'tu_pagina.html' por la URL de la página a la que quieres redirigir
+        }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const currentDateElement = document.getElementById("currentDate");
+        const todayBtn2 = document.getElementById("todayBtn2");
+        const prevMonthBtn = document.getElementById("prevMonthBtn");
+        const nextMonthBtn = document.getElementById("nextMonthBtn");
+
+        // Función para actualizar la fecha en el elemento <h1>
+        function updateCurrentDate(date) {
+            const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+            currentDateElement.innerText = date.toLocaleDateString("es-ES", options);
+        }
+
+        // Fecha quemada inicial (por ejemplo, "2023-09-26")
+        const currentDate = new Date("2023-09-26");
+        updateCurrentDate(currentDate);
+
+        todayBtn2.addEventListener("click", function() {
+            const currentDate = new Date();
+            updateCurrentDate(currentDate);
+        });
+
+        prevMonthBtn.addEventListener("click", function() {
+            currentDate.setDate(currentDate.getDate() - 1);
+            updateCurrentDate(currentDate);
+        });
+
+        nextMonthBtn.addEventListener("click", function() {
+            currentDate.setDate(currentDate.getDate() + 1);
+            updateCurrentDate(currentDate);
+        });
+
+        function redirectToListAlarm() {
+            window.location.href = 'index.html'; // Cambia 'tu_pagina.html' por la URL de la página a la que quieres redirigir
+        }
+
+        // Función para actualizar la fecha en el elemento <h1>
+        function updateCurrentDate(date) {
+            const options = { weekday: "long", day: "numeric" };
+            const formattedDate = date.toLocaleDateString("es-ES", options);
+            const dayOfWeek = date.toLocaleDateString("es-ES", { weekday: "long" });
+            const weekNumber = getWeekNumber(date);
+
+            currentDateElement.innerText = `DIA ${weekNumber}: ${formattedDate}`;
+        }
+
+        // Función para obtener el número de la semana
+        function getWeekNumber(date) {
+            const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+            const dayNum = d.getUTCDay() || 7;
+            d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+            const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+            return Math.ceil((((d - yearStart) / 86400000) + 1) / 7);
+        }
+    });
+</script>
+
+
+
+
+</body>
+</html>

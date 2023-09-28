@@ -1,0 +1,394 @@
+/* Estilos generales para el encabezado */
+header {
+    background-color: #106527;
+    color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto auto auto; /* Utiliza Grid para organizar los elementos */
+    align-items: center;
+    gap: 30px; /* Espacio entre los elementos */
+}
+
+/* Estilo para la imagen */
+img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Estilos para el título */
+h1 {
+    margin: 0; /* Elimina el margen predeterminado */
+}
+
+/* Estilos para los botones */
+.boton {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 16px
+}
+
+.boton-salir {
+    background-color: white;
+    color: #333;
+}
+
+.categoria {
+    background-color: rgba(255, 255, 0, 0.5); /* Amarillo transparente */
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 10px; /* Añade espacio alrededor del texto */
+    border: 2px solid black;
+}
+
+/* Estilo para la hora con fondo blanco transparente */
+.hora {
+    background-color: rgba(213, 223, 227, 0.5); /* Amarillo transparente */
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 40px; /* Añade espacio alrededor del texto */
+    border: 2px solid black;
+}
+
+/* Estilo para el campo de nombre en negrita (bold) */
+.nombre {
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr auto ; /* Utiliza Grid para organizar los elementos */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilo para los contenedores de lista */
+.list-container {
+    padding: 15px;
+}
+
+/* Estilo para el contenedor de Grid  de busqueda y agregar alarma*/
+#my-custom-grid {
+    display: grid;
+    grid-template-columns: 15fr 1fr; /* Asigna más espacio a la columna de la derecha */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Estilos para el icono SVG */
+.bi-plus-circle {
+    height: 100%; /* Establece la altura al 100% del contenedor (input-group) */
+    /* Añade otros estilos si es necesario */
+}
+
+#add-buttom {
+    /* Establece un padding responsivo en la parte izquierda */
+    padding-left: 1%; /* Ajusta el valor según tus necesidades */
+}
+
+/* Fondo negro para el span con clase input-group-text */
+#search-addon {
+    background-color: black;
+    color: rgb(200, 6, 6); /* Para asegurarte de que el texto sea visible */
+}
+
+/* Fondo blanco para el icono i dentro de input-group-text */
+#fa-search {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255); /* Cambia el color del icono según sea necesario */
+}
+
+.bi-trash-fill {
+    z-index: 1;
+}
+
+/* Estilo CSS para cambiar el color del SVG al pasar el mouse por encima */
+#add-button:hover {
+    color: #00bbff; /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#activate-button:hover {
+    color: #00bbff; /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#dismiss-button:hover {
+    color: #00bbff; /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#activate-button:active {
+    color: green; /* Cambia el color a verde cuando se hace clic */
+    font-weight: bold; /* O cualquier otro estilo que desees aplicar */
+    /* Otras propiedades de estilo aquí */
+}
+
+#dismiss-button:active {
+    color: rgb(255, 208, 0); /* Cambia el color a verde cuando se hace clic */
+    font-weight: bold; /* O cualquier otro estilo que desees aplicar */
+    /* Otras propiedades de estilo aquí */
+}
+
+
+#trash-button:hover {
+    color: #00bbff; /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(211, 0, 0, 0.5);
+}
+
+.headers-buttons:hover {
+    color: rgb(152, 152, 152); /* Cambia el color a gris */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(152, 152, 152, 0.406);
+}
+
+#salir-button{
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 10px; /* Añade espacio alrededor del texto */
+}
+
+/* Estilos para el formulario =================================================================*/
+.card {
+    width: 300px; /* Define el ancho del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.card-header {
+    background-color: white; /* Fondo blanco para el encabezado */
+}
+
+.card-body {
+    padding: 20px; /* Espaciado dentro del cuerpo del formulario */
+}
+
+.card-footer {
+    background-color: white; /* Fondo blanco para el pie del formulario */
+    padding: 15px; /* Espaciado dentro del pie del formulario */
+}
+
+/* Estilo para el título centrado */
+.card-header h4 {
+    text-align: center;
+    margin: 0;
+    padding: 10px; /* Espaciado en el encabezado */
+}
+
+/* Estilo para el botón "Crear" */
+#btn-crear {
+    background-color: #fbfbfb;;
+    border: 2px solid black;
+    color: #000000; /* Color del botón */
+    padding: 5px 30px; /* Añade espacio alrededor del texto */
+}
+
+/* Estilo para los botones de AM/PM */
+.btn-sm {
+    width: auto; /* Ajusta el ancho de los botones automáticamente */
+    padding: 0.25rem 0.5rem; /* Añade un poco de espacio alrededor de los botones */
+}
+
+/* Estilo para el campo de hora */
+#hora-fecha {
+    width: 60%; /* Ajusta el ancho del campo de hora según tus necesidades */
+}
+
+#fecha {
+    width: 110%; /* Ajusta el ancho del campo de hora según tus necesidades */
+}
+
+.day-button {
+    width: 40px; /* Ancho fijo */
+    height: 40px; /* Altura fija */
+    border-radius: 50%; /* Esto hace que los botones sean círculos */
+    margin-right: 5px; /* Espacio entre los botones (ajusta según lo necesites) */
+    display: flex; /* Usamos display: flex para centrar contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    white-space: nowrap; /* Evita el ajuste de texto */
+}
+
+.custom-combobox {
+    position: relative;
+    display: inline-block;
+  }
+  
+.custom-combobox select {
+width: 100%;
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+appearance: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+background: url('flecha-combo.png') no-repeat right center;
+}
+  
+.custom-combobox select::-ms-expand {
+display: none;
+}
+
+.form-check{
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 5px;
+    color: #a19f9f;
+}
+
+
+  
+
+/* Estilos para el calendario y dia calendario =================================================================*/
+
+.btn-close:hover{
+    color: rgb(18, 18, 18); /* Cambia el color a azul */
+    border-radius: 20px;
+    background-color: #fb0000; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#btn-crear:hover{
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    border-radius: 20px;
+    background-color: #00bbff; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.text-center:hover{
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    border-radius: 20px;
+    background-color: #00bbff; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#calendarBody:hover{
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    border-radius: 20px;
+    background-color: #000000; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#todayBtn{
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 10px; /* Añade espacio alrededor del texto */
+    background-color: #848484;
+}
+
+#monthBtn{
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 10px;
+    background-color: #848484; /* Añade espacio alrededor del texto */
+}
+
+#todayBtn2{
+    border-radius: 20px; /* Redondea las esquinas */
+    padding: 5px 10px;
+    background-color: #848484; /* Añade espacio alrededor del texto */
+}
+
+#todayBtn:hover {
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    background-color: #00bbff; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#monthBtn:hover {
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    background-color: #00bbff; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#todayBtn2:hover {
+    color: rgb(255, 255, 255); /* Cambia el color a azul */
+    background-color: #00bbff; /* Añade espacio alrededor del texto */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#prevMonthBtn{
+    background: none;
+    color: #000000;
+}
+
+#nextMonthBtn{
+    background: none;
+    color: #000000;
+}
+
+#prevMonthBtn:hover {
+    color: rgb(114, 114, 114); /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#nextMonthBtn:hover {
+    color: rgb(114, 114, 114); /* Cambia el color a azul */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es interactivo */
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo por defecto para los círculos */
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: yellow; /* Color de fondo amarillo */
+    border-radius: 50%; /* Forma de círculo */
+    display: inline-block;
+    margin-right: 10px; /* Espacio entre el círculo y el texto */
+}
+
+/* Estilo por defecto para el texto */
+.large-text p {
+    color: black; /* Color de texto por defecto */
+}
+
+/* Estilo al pasar el mouse por encima de cada fila */
+.row:hover .circle {
+    background-color: #00bbff; /* Cambia el color del círculo a azul */
+}
+
+.row:hover p {
+    color: gray; /* Cambia el color del texto a gris */
+}
+
+
+/* Establece la imagen de fondo para todo el cuerpo (body) del HTML */
+body {
+    background-image: url('Fondo.png'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el cuerpo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-attachment: fixed; /* Mantiene la imagen de fondo fija en su lugar */
+    /* Añade otros estilos según tus preferencias */
+    color: white; /* Cambia el color del texto para que sea legible en el fondo */
+}
+
+
+
+
+
+
+
+
+
+
